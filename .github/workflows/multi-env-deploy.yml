@@ -1,0 +1,20 @@
+name: secrets
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'select the environment'
+        required: true
+        type: choice
+        default: 'dev'
+        options:
+          - dev
+          - staging
+          - prod
+
+jobs:
+  use-secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print env name
+        run: echo 'deploying to ${{ inputs.environment }}'
