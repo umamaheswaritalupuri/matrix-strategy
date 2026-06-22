@@ -12,6 +12,8 @@ on:
         type: boolean
 jobs:
   validate:
+    outputs:
+      validation_status: ${{ steps.set-status.outputs.validation_status }}
     runs-on: ubuntu-latest
     steps:
       - run: |
