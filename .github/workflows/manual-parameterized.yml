@@ -31,7 +31,7 @@ jobs:
              # FIXED: Swapped '==' for a single '=' to properly assign the output variable
              echo "validation_status=success" >> $GITHUB_OUTPUT
           else
-             echo "validation_status=success" >> $GITHUB_OUTPUT
+             echo "validation_status=skipped" >> $GITHUB_OUTPUT
           fi
 
   summary:
