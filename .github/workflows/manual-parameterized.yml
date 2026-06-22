@@ -1,4 +1,4 @@
-name: workflow_dispatch
+name: Parameterized Manual Workflow
 on:
   workflow_dispatch:
     inputs:
